@@ -140,31 +140,31 @@ git push --follow-tags origin master; npm publish
 yarn run info
 
   info:
-    Display information about the scripts
+    显示所有有关脚本的信息
   build:
-    (Trash and re)build the library
+    （垃圾回收）构建库
   lint:
-    Lint all typescript source files
+    验证所有的typescript源文件的代码规范
   unit:
-    Build the library and run unit tests
+    构建库并运行单元测试
   test:
-    Lint, build, and test the library
+    代码规范验证，构建和测试库
   watch:
-    Watch source files, rebuild library on changes, rerun relevant tests
+    监视源文件，重新构建库上的更改，重新运行相关测试
   cov:
-    Run tests, generate the HTML coverage report, and open it in a browser
+    运行测试，生成HTML覆盖率报告，并在浏览器中打开它
   docs:
-    Generate HTML API documentation and open it in a browser
+    生成HTML API文档并在浏览器中打开它
   docs:publish:
-    Generate HTML API documentation and push it to GitHub Pages
+    生成HTML API文档并将其推送到GitHub Pages
   docs:json:
-    Generate API documentation in typedoc JSON format
+    以typedoc JSON格式生成API文档
   release:
-    Bump package.json version, update CHANGELOG.md, tag a release
+    Bump package.json版本，更新CHANGELOG.md，标记一个版本
   reset:
-    Delete all untracked files and reset the repo to the last commit
+    删除所有未跟踪的文件，并将仓库重置为最后一次提交
   publish:
-    Reset, build, test, publish docs, and prepare release (a one-step publish process)
+    Reset, build, test, publish docs, and prepare release (一键发布过程)
 ```
 
 
