@@ -96,6 +96,76 @@ yarn docs:publish
 yarn docs:json
 ```
 
+## 生成/更新[更改日志] & [标签发布]
+
+该项目用[常规变更日志](https://github.com/conventional-changelog/conventional-changelog)工具来使项目管理发布更容易。 有关工作流的更多信息请参阅[标准版本](https://github.com/conventional-changelog/standard-version)文档，或一个相关例子的[`CHANGELOG.md`](https://github.com/bitjson/typescript-starter/blob/master/CHANGELOG.md)。
+
+```bash
+# bump package.json version, update CHANGELOG.md, git tag the release
+yarn changelog
+```
+
+## 一键发布脚本
+
+汇集上面的许多步骤，这个库包含一个一键发布命令。
+
+```bash
+# Standard release
+yarn release
+# Release without bumping package.json version
+yarn changelog -- --first-release
+# PGP sign the release
+yarn changelog -- --sign
+```
+
+此命令运行如下命令：
+- `yarn reset`: cleans the repo by removing all untracked files and resetting `--hard` to the latest commit. (**Note: this could be destructive.**)
+- `yarn test`: build and fully test the project
+- `yarn docs:publish`: generate and publish the latest version of the documentation to GitHub Pages
+- `yarn changelog`: bump package.json version, update CHANGELOG.md, and git tag the release
+
+当脚本完成后，它将记录推送发布提交到仓库的所需的最终命令，并在`npm`注册处发布包：
+
+```
+git push --follow-tags origin master; npm publish
+```
+
+如果你想先查看发布，然后执行命令发布所有内容。
+
+## 所有包脚本
+
+您可以运行`info`脚本，以获取有关想要单独运行的每个脚本的信息。
+
+```
+yarn run info
+
+  info:
+    Display information about the scripts
+  build:
+    (Trash and re)build the library
+  lint:
+    Lint all typescript source files
+  unit:
+    Build the library and run unit tests
+  test:
+    Lint, build, and test the library
+  watch:
+    Watch source files, rebuild library on changes, rerun relevant tests
+  cov:
+    Run tests, generate the HTML coverage report, and open it in a browser
+  docs:
+    Generate HTML API documentation and open it in a browser
+  docs:publish:
+    Generate HTML API documentation and push it to GitHub Pages
+  docs:json:
+    Generate API documentation in typedoc JSON format
+  release:
+    Bump package.json version, update CHANGELOG.md, tag a release
+  reset:
+    Delete all untracked files and reset the repo to the last commit
+  publish:
+    Reset, build, test, publish docs, and prepare release (a one-step publish process)
+```
 
 
 
