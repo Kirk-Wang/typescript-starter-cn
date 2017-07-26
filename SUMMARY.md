@@ -1,4 +1,20 @@
 # Summary
 
-* [扉页](README.md)
+* [扉页](README.md#typescript-starter)
+    * [开始吧](README.md#Get-started)
+    * [开发禅宗](README.md#Development-zen)
+    * [启用强类型检查（推荐）](README.md#Enable-stronger-type-checking)
+    * [查看测试覆盖率](README.md#View-test-coverage)
+    * [生成您的API文档](README.md#Generate-your-API-docs)
+    * [生成/更新[更改日志] & [标签发布]](README.md#Generate-update-changelog-and-tag-release)
+    * [一键发布脚本](README.md#One-step-publish-preparation-script)
+    * [所有包脚本](README.md#All-package-scripts)
+    * [说明](README.md#Notes)
+        * [多种构建 (`main`，`module`和`browser`)](README.md#Multiple-builds)
+        * [测试](README.md#Testing)
+        * [浏览器库](README.md#Browser-libraries)
+        * [构建浏览器依赖关系](README.md#Building-browser-dependencies)
+        * [依赖于`tslib`](README.md#Dependency-on-tslib)
+        * [针对较旧的环境](README.md#Targeting-older-environments)
+    * [其它typescript-starter](README.md#typescript-starter-in-the-wild)
 
